@@ -1,9 +1,29 @@
+import java.util.Arrays;
+
 public class App {
   
   public static void main(String[] args) {
-    double[] lotteryNums = {1,2,3,4,5}; //new double[5];
-    System.out.println(lotteryNums[2]);
-    lotteryNums[2] = 40;
-    System.out.println(lotteryNums[2]);
+    int[] arr = {1,2,3,4,5}; 
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i]);
+    }
+    System.out.println();
+
+    for (int i = arr.length - 1; i >= 0; i--) {
+      System.out.println(arr[i]);
+      
+    }
+    System.out.println();
+    for (int i = arr.length - 1; i >= 0; i -= 2) {
+      System.out.println(arr[i]);
+    }
+    System.out.println();
+
+    for (int item: arr) {
+      System.out.println(item);
+    }
+    System.out.println();
+
+    Arrays.stream(arr).forEach(System.out::println);
   }
 }
