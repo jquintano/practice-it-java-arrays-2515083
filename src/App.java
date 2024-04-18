@@ -1,7 +1,15 @@
 public class App {
   
   public static void printTriangle(Object[] arr) {
-
+    StringBuilder myStr = new StringBuilder();
+    for (int i = 1; i <= arr.length; i++) {
+      for (int j = 0; j < i; j++) {
+        myStr.append(arr[j]);
+      }
+      myStr.append("\n");
+    }
+    System.out.println(myStr.toString());
+    System.out.println();
  }
     
   public static void main(String args[]) {
